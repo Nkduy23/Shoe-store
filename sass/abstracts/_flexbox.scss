@@ -1,0 +1,46 @@
+// flexbox
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+// mix flexbox
+.d-flex-center {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+}
+
+.d-flex-between {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .align-items-center;
+}
+
+// flex wrap
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.row-gap {
+  row-gap: 1rem;
+}

@@ -1,5 +1,68 @@
 // `sm` applies to x-small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {
+  .header__search {
+    display: none;
+  }
+  header {
+    .header__actions {
+      .actions {
+        .actions__link {
+          .fa-magnifying-glass {
+            display: block;
+            color: #5b93d3;
+          }
+        }
+      }
+    }
+    .checkbox-search:checked ~ .overlay1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .header__action-mobile {
+      display: block;
+      position: fixed;
+      overflow-y: scroll;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      width: 85%;
+      height: 100%;
+      background-color: $colorFFF;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
+      -webkit-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
+      -moz-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
+      transform: translateX(100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      .close-icon {
+        display: block;
+      }
+      .header__search {
+        display: block;
+        width: 100%;
+        .search {
+          display: inline-block;
+          width: 100%;
+          .search__input {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .checkbox-search:checked ~ .header__action-mobile {
+      transform: translateX(0);
+    }
+  }
+}
 
 // `md` applies to small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
+@media (max-width: 767.98px) {
+}

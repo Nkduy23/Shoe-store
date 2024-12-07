@@ -30,8 +30,8 @@
       top: 0;
       left: 0;
       z-index: 10;
-      width: 50%;
-      height: 100vh;
+      width: 85%;
+      height: 100%;
       background-color: $colorFFF;
       transition: transform 0.3s ease-in-out;
       box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
@@ -47,6 +47,19 @@
         position: absolute;
         right: 1rem;
         top: 10px;
+      }
+      .menu__icon::before {
+        font-size: 1.2rem;
+        color: #949292;
+        position: relative;
+        display: inline-block;
+        content: "\f106";
+        transition: transform 0.3s ease-in-out, content 0.3s ease-in-out;
+      }
+      .checkbox-nav-mobile:checked + label .menu__icon::before {
+        content: "\f107";
+        color: $color000;
+        transform: translateY(-10px);
       }
       .menu__item {
         position: relative;
@@ -100,6 +113,7 @@
       top: 0;
       padding-top: 1rem;
       z-index: 100;
+      display: none;
     }
     .header__list-menu {
       text-align: center;

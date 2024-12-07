@@ -29,12 +29,19 @@
   @extend .justify-content-center;
   @extend .align-items-center;
 }
+.d-flex-center--column {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+}
 
 .d-flex-between {
   @extend .d-flex;
   @extend .justify-content-between;
   @extend .align-items-center;
 }
+
 
 // flex wrap
 .flex-wrap {

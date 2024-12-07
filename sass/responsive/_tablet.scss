@@ -38,6 +38,11 @@
       -webkit-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
       -moz-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
       transform: translateX(-110%);
+      .header__list-menu {
+        .header__title {
+          font-weight: 600;
+        }
+      }
       .menu__list {
         flex-direction: column;
       }
@@ -68,7 +73,7 @@
         line-height: 2.5rem;
       }
       .menu__link {
-        color: $color000;
+        color: #2c2c2c;
         text-transform: uppercase;
         display: inline-block;
         padding: 1rem;
@@ -84,7 +89,7 @@
         padding-left: 2rem;
         .menu__sub-link {
           display: inline-block;
-          color: $color000;
+          color: #3e4141;
           padding: 0.5rem;
         }
       }

@@ -7,7 +7,7 @@ header {
   // logo
   .header__logo {
     .logo {
-      width: 12rem;
+      width: 10rem;
       height: auto;
     }
   }
@@ -38,7 +38,7 @@ header {
           transition: opacity 0.3s ease-in-out;
           position: relative;
           .menu__link {
-            color: $color000;
+            color: #4a4b4b;
             padding: 0.5rem;
             text-transform: uppercase;
           }
@@ -115,9 +115,10 @@ header {
         top: 50%;
         right: 1rem;
         transform: translateY(-50%);
+        color: #666768;
       }
       &:hover .search__icon::before {
-        color: #5b93d3;
+        color: #151616;
       }
     }
   }

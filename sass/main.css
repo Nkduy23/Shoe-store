@@ -113,7 +113,7 @@ header {
   top: -2rem;
 }
 header .header__logo .logo {
-  width: 12rem;
+  width: 10rem;
   height: auto;
 }
 header .checkbox {
@@ -140,7 +140,7 @@ header .header__menu .menu .menu__list .menu__item {
   position: relative;
 }
 header .header__menu .menu .menu__list .menu__item .menu__link {
-  color: #000;
+  color: #4a4b4b;
   padding: 0.5rem;
   text-transform: uppercase;
 }
@@ -211,9 +211,10 @@ header .header__search .search .search__icon::before {
   top: 50%;
   right: 1rem;
   transform: translateY(-50%);
+  color: #666768;
 }
 header .header__search .search:hover .search__icon::before {
-  color: #5b93d3;
+  color: #151616;
 }
 header .header__actions {
   position: relative;
@@ -324,6 +325,9 @@ header .header__actions .actions .actions__link:nth-child(3):hover + .actions__l
     -moz-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
     transform: translateX(-110%);
   }
+  header .header__nav-mobile .header__list-menu .header__title {
+    font-weight: 600;
+  }
   header .header__nav-mobile .menu__list {
     flex-direction: column;
   }
@@ -354,7 +358,7 @@ header .header__actions .actions .actions__link:nth-child(3):hover + .actions__l
     line-height: 2.5rem;
   }
   header .header__nav-mobile .menu__link {
-    color: #000;
+    color: #2c2c2c;
     text-transform: uppercase;
     display: inline-block;
     padding: 1rem;
@@ -371,7 +375,7 @@ header .header__actions .actions .actions__link:nth-child(3):hover + .actions__l
   }
   header .header__nav-mobile .menu__sub-list .menu__sub-link {
     display: inline-block;
-    color: #000;
+    color: #3e4141;
     padding: 0.5rem;
   }
   header .checkbox:checked ~ .header__nav-mobile {

@@ -134,3 +134,6 @@ function initSlider() {
   // Khởi chạy autoplay
   startAutoPlay();
 }
+
+// Còn ở trên điện thoại không lướt cảm ứng liên tục được, 
+// Nên thêm tính năng chạm dừng khi người dùng chạm dừng lại để xem ảnh

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .countdown-container {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #countdown {
+        font-size: 2rem;
+        color: #ff0000;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countdown-container">
+      <h1>Sale Countdown</h1>
+      <p id="countdown">00:00:00:00</p>
+    </div>
+    <script>
+      // Khởi tạo thời gian kết thúc sale (UTC format để đồng nhất với mọi người)
+      const saleEndTime = new Date("2024-12-15T23:59:59Z").getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime(); // Lấy thời gian hiện tại
+        const timeLeft = saleEndTime - now; // Tính thời gian còn lại
+
+        if (timeLeft <= 0) {
+          document.getElementById("countdown").textContent = "SALE ENDED!";
+          clearInterval(countdownInterval); // Dừng interval nếu hết giờ
+          return;
+        }
+
+        // Tính toán ngày, giờ, phút, giây
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Hiển thị lên giao diện
+        document.getElementById("countdown").textContent = `${days.toString().padStart(2, "0")}:${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+      }
+
+      // Cập nhật countdown mỗi giây
+      const countdownInterval = setInterval(updateCountdown, 1000);
+      updateCountdown(); // Gọi ngay khi tải trang
+    </script>
+  </body>
+</html>

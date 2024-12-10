@@ -1,0 +1,27 @@
+.countdown {
+  margin: 3rem 1.5rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  strong {
+    font-weight: bold;
+    color: #f2611c;
+    font-size: 3.5rem;
+  }
+  .countdown__content-icon {
+    width: 2rem;
+    height: auto;
+  }
+  .countdown__item {
+    #countdown__item-time {
+      .countdown-unit {
+        background-color: #262626;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0 2px;
+        font-size: 1.5rem;
+        display: inline-block;
+      }
+    }
+  }
+}

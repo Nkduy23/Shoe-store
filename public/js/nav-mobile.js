@@ -3,11 +3,11 @@ document.querySelectorAll(".menu__item").forEach((item) => {
     const checkboxId = this.dataset.checkbox;
     const checkbox = document.getElementById(checkboxId);
     checkbox.checked = !checkbox.checked;
-    // const url = this.dataset.url;
-    // if (checkbox) {
-    //     checkbox.checked = true;
-    //   }
+    const url = this.dataset.url;
+    if (checkbox) {
+        checkbox.checked = true;
+      }
 
-    //   window.location.href = url;
+      window.location.href = url;
   });
 });

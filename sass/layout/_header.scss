@@ -1,9 +1,10 @@
 header {
+  background-color: $colorFFF;
   position: sticky;
   padding-top: 2.8rem;
   padding-bottom: 0.8rem;
   top: -2rem;
-  // background-color: gray;
+  z-index: 1000;
   // logo
   .header__logo {
     .logo {

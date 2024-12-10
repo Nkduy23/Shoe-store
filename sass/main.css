@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -65,7 +66,7 @@ body {
   font-family: "Mulish", serif;
 }
 
-.d-flex, .d-flex-between, .d-flex-center--column, .d-flex-center {
+.d-flex, .d-flex-between, .d-flex-center {
   display: flex;
 }
 
@@ -73,15 +74,15 @@ body {
   flex-direction: row;
 }
 
-.flex-column, .d-flex-center--column {
+.flex-column {
   flex-direction: column;
 }
 
-.justify-content-center, .d-flex-center--column, .d-flex-center {
+.justify-content-center, .d-flex-center {
   justify-content: center;
 }
 
-.align-items-center, .d-flex-between, .d-flex-center--column, .d-flex-center {
+.align-items-center, .d-flex-between, .d-flex-center {
   align-items: center;
 }
 
@@ -101,16 +102,22 @@ body {
   cursor: pointer;
 }
 
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
 .header__container {
   max-width: calc(100% - 4.8rem);
   margin: 0 auto;
 }
 
 header {
+  background-color: #fff;
   position: sticky;
   padding-top: 2.8rem;
   padding-bottom: 0.8rem;
   top: -2rem;
+  z-index: 1000;
 }
 header .header__logo .logo {
   width: 10rem;
@@ -287,6 +294,40 @@ header .header__actions .actions .actions__link:nth-child(3):hover + .actions__l
     -moz-transform: rotate(300deg) translate(100px, 0px);
     opacity: 0;
   }
+}
+
+.slider .slider__container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider .slider__img {
+  min-width: 100%;
+  -webkit-user-drag: none; /* CSS để vô hiệu kéo hình ảnh */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /* Vô hiệu chọn hình ảnh */
+}
+.slider .slider__control-prev,
+.slider .slider__control-next {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+}
+.slider .slider__control-prev:hover,
+.slider .slider__control-next:hover {
+  width: 3rem;
+  height: 3rem;
+}
+.slider .slider__control-prev {
+  left: 0;
+}
+.slider .slider__control-next {
+  right: 0;
 }
 
 @media (max-width: 991.98px) {

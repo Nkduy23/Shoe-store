@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   </head>
   <body style="height: 5000px">
+    <!-- header -->
     <header>
       <div class="header__container d-flex-between">
         <!-- icon bar -->
@@ -25,7 +26,7 @@
         <div class="header__logo cursor-pointer">
           <img class="logo" src="./images/logo.png" alt="logo" />
         </div>
-        <!-- nav -->
+        <!-- nav-pc -->
         <div class="header__menu">
           <nav class="menu">
             <ul class="menu__list d-flex-center flex-wrap row-gap">
@@ -64,7 +65,6 @@
             </ul>
           </nav>
         </div>
-
         <!-- input checkbox -->
         <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" />
         <!-- overlay -->
@@ -134,7 +134,6 @@
             <i class="search__icon fas cursor-pointer"></i>
           </form>
         </div>
-
         <!-- input checkbox -->
         <input class="checkbox-search" type="checkbox" name="checkbox-search" id="checkbox-search" />
         <!-- overlay -->
@@ -171,6 +170,29 @@
         </div>
       </div>
     </header>
+    <!-- slider -->
+    <div class="slider cursor-pointer">
+      <div class="slider__container">
+        <div class="slider__wrap d-flex cursor-grabbing">
+          <img src="./images/slider1-pc.jpg" alt="Slide 1" class="slider__img" data-large="./images/slider1-pc.jpg" data-small="./images/slider1-mb.jpg" />
+          <img src="./images/slider2-pc.jpg" alt="Slide 2" class="slider__img" data-large="./images/slider2-pc.jpg" data-small="./images/slider2-mb.jpg" />
+          <img src="./images/slider3-pc.jpg" alt="Slide 3" class="slider__img" data-large="./images/slider3-pc.jpg" data-small="./images/slider3-mb.jpg" />
+        </div>
+        <div class="slider__control">
+          <div class="slider__control-icon">
+            <svg class="slider__control-prev prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path fill="#fff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+            </svg>
+          </div>
+          <div class="slider__control-icon">
+            <svg class="slider__control-next next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path fill="#fff" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="javascript/nav-mobile.js"></script>
+    <script src="javascript/slider.js"></script>
   </body>
 </html>

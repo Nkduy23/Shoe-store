@@ -1,0 +1,32 @@
+.slider {
+  .slider__container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .slider__img {
+    min-width: 100%;
+    -webkit-user-drag: none; /* CSS để vô hiệu kéo hình ảnh */
+    user-select: none; /* Vô hiệu chọn hình ảnh */
+  }
+  .slider__control-prev,
+  .slider__control-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 2rem;
+    &:hover {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .slider__control-prev {
+    left: 0;
+  }
+  .slider__control-next {
+    right: 0;
+  }
+}

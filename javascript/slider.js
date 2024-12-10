@@ -34,8 +34,8 @@ function initSlider() {
   let currentIndex = 0;
   let autoSlideInterval;
   let startX = 0;
-  let currentX = 0;
   let isDragging = false;
+  let currentX = 0;
 
   // Cập nhật vị trí slider
   function updateSliderPosition(transition = true) {
@@ -43,7 +43,7 @@ function initSlider() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
-  // Chuyển đến slide tiếp theo hoặc trước
+  // Chuyển đến slide tiếp theo
   function changeSlide(direction) {
     clearInterval(autoSlideInterval);
     if (direction === "next") {
@@ -80,27 +80,23 @@ function initSlider() {
     }, 3000);
   }
 
-  // Lắng nghe sự kiện khi bắt đầu kéo/chạm
-  function startDragging(e) {
-    startX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+  // Lắng nghe sự kiện khi bắt đầu kéo (chuột và cảm ứng)
+  const startEvent = (e) => {
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
     isDragging = true;
     slider.style.transition = "none";
-  }
+  };
 
-  // Lắng nghe sự kiện khi đang kéo/chạm
-  function dragging(e) {
+  //  Lắng nghe sự kiện kéo chuột hoặc cảm ứng
+  const moveEvent = (e) => {
     if (!isDragging) return;
-    const currentDragX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
-    currentX = currentDragX - startX;
+    currentX = (e.touches ? e.touches[0].clientX : e.clientX) - startX;
     slider.style.transform = `translateX(calc(${-currentIndex * 100}% + ${currentX}px))`;
-  }
+  };
 
-  // Lắng nghe sự kiện khi kết thúc kéo/chạm
-  function stopDragging() {
-    if (!isDragging) return;
+  // Lắng nghe sự kiện thả chuột hoặc kết thúc chạm
+  const endEvent = () => {
     isDragging = false;
-
-    // Nếu kéo đủ xa (ví dụ: hơn 100px), chuyển slide
     if (Math.abs(currentX) > 100) {
       if (currentX < 0) {
         currentIndex++;
@@ -108,34 +104,32 @@ function initSlider() {
         currentIndex--;
       }
     }
-
     // Đảm bảo currentIndex trong phạm vi hợp lệ
     if (currentIndex < 0) {
       currentIndex = slides.length - 1;
     } else if (currentIndex >= slides.length) {
       currentIndex = 0;
     }
-
-    updateSliderPosition();
+    setTimeout(() => {
+      updateSliderPosition();
+    }, 200);
     startAutoPlay();
-  }
+  };
 
-  // Lắng nghe sự kiện khi rời chuột hoặc chạm
-  slider.addEventListener("mouseleave", stopDragging);
-  slider.addEventListener("mouseup", stopDragging);
-  slider.addEventListener("touchend", stopDragging);
+  // Lắng nghe sự kiện cảm ứng và chuột
+  slider.addEventListener("mousedown", startEvent);
+  slider.addEventListener("mousemove", moveEvent);
+  slider.addEventListener("mouseup", endEvent);
+  slider.addEventListener("mouseleave", endEvent);
+
+  // Các sự kiện cảm ứng cho thiết bị di động
+  slider.addEventListener("touchstart", startEvent);
+  slider.addEventListener("touchmove", moveEvent);
+  slider.addEventListener("touchend", endEvent);
 
   // Gắn sự kiện cho nút next và prev
   nextButton.addEventListener("click", () => changeSlide("next"));
   prevButton.addEventListener("click", () => changeSlide("prev"));
-
-  // Lắng nghe sự kiện khi bắt đầu kéo/chạm
-  slider.addEventListener("mousedown", startDragging);
-  slider.addEventListener("touchstart", startDragging);
-
-  // Lắng nghe sự kiện khi đang kéo/chạm
-  slider.addEventListener("mousemove", dragging);
-  slider.addEventListener("touchmove", dragging);
 
   // Khởi chạy autoplay
   startAutoPlay();

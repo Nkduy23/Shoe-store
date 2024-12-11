@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome to Our Online Store</h2>
+    <p>Browse our collection of amazing products!</p>
+
+    <div class="product-list">
+      <h3>Featured Products</h3>
+      {{#each products}}
+        <div class="product">
+          <img src="{{imgSrc}}" alt="{{altText}}" />
+          <p>${{price}}</p>
+          <p>Sale: {{sale}}%</p>
+        </div>
+      {{/each}}
+    </div>
+
+  </body>
+</html>

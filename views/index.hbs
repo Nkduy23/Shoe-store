@@ -1,11 +1,11 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- style -->
-    <link rel="stylesheet" href="/css/main.css" />
+    {{! <link rel="stylesheet" href="/css/main.css" /> }}
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -26,7 +26,7 @@
         </div>
         <!-- logo -->
         <div class="header__logo cursor-pointer">
-          <img class="logo" src="/img/logo.png" alt="logo" />
+          <img class="logo" src="/images/logo.png" alt="logo" />
         </div>
         <!-- nav-pc -->
         <div class="header__menu">
@@ -176,9 +176,9 @@
     <div class="slider cursor-pointer">
       <div class="slider__container">
         <div class="slider__wrap d-flex cursor-grabbing">
-          <img src="/img/slider1-pc.jpg" alt="Slide 1" class="slider__img" data-large="/img/slider1-pc.jpg" data-small="/img/slider1-mb.jpg" />
-          <img src="/img/slider2-pc.jpg" alt="Slide 2" class="slider__img" data-large="/img/slider2-pc.jpg" data-small="/img/slider2-mb.jpg" />
-          <img src="/img/slider3-pc.jpg" alt="Slide 3" class="slider__img" data-large="/img/slider3-pc.jpg" data-small="/img/slider3-mb.jpg" />
+          <img src="/images/slider1-pc.jpg" alt="Slide 1" class="slider__img" data-large="/images/slider1-pc.jpg" data-small="/images/slider1-mb.jpg" />
+          <img src="/images/slider2-pc.jpg" alt="Slide 2" class="slider__img" data-large="/images/slider2-pc.jpg" data-small="/images/slider2-mb.jpg" />
+          <img src="/images/slider3-pc.jpg" alt="Slide 3" class="slider__img" data-large="/images/slider3-pc.jpg" data-small="/images/slider3-mb.jpg" />
         </div>
         <div class="slider__control">
           <div class="slider__control-icon">
@@ -197,11 +197,8 @@
     <!-- countdown -->
     <div class="countdown d-flex-center flex-wrap">
       <div class="countdown__content">
-        <strong
-          >F<svg class="countdown__content-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-            <path fill="#f2611c" d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" /></svg
-          >ash Sale</strong
-        >
+        <strong>F<svg class="countdown__content-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path fill="#f2611c" d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" /></svg>ash Sale</strong>
       </div>
       <div class="countdown__item">
         <p id="countdown__item-time">
@@ -213,41 +210,36 @@
       </div>
     </div>
     <main>
+      <!-- Template -->
       <script id="product-template" type="text/x-handlebars-template">
         {{#each products}}
-          <div class="product">
-            <a href="#">
-              <div class="product__img">
-                <img src="{{imgSrc}}" alt="{{altText}}" />
-                <div class="product__label">
-                  <span>Giảm</span>
-                  <span>${{sale}}</span>
-                </div>
-              </div>
-            </a>
-            <div class="product__price">
-              <p>${{price}}</p>
-            </div>
-            <div class="product__progress">
-              <div class="progress-bar"></div>
-              Đã bán
-              {{sold}}
-            </div>
-            <div class="variantcolor">
-              {{#each colors}}
-                <div class="color-block" style="background-color: {{this}};"></div>
-              {{/each}}
-            </div>
-          </div>
+          <div class="product"> <div class="product__img"> <img src="{{imgSrc}}" alt="{{altText}}"> </div> <div class="product__label"> <span>Giảm</span> <span>${{sale}}</span> </div> <div class="product__price"> <p>Giá: ${{price}}</p> </div> <div class="product__progress"> Đã bán:
+          {{sold}}
+          </div> <div class="variantcolor">
+          {{#each colors}}
+            <div class="color-block" style="background-color:
+            {{this}};"></div>
+          {{/each}}
+          </div> </div>
         {{/each}}
       </script>
+
+      <!-- Container -->
       <div class="main__container">
         <div class="products d-flex-center flex-wrap" id="product-list"></div>
       </div>
     </main>
-    <script src="/js/product.js"></script>
     <!-- <script src="javascript/nav-mobile.js"></script> -->
-    <script src="/js/slider.js"></script>
+    {{! <script src="/js/slider.js"></script>
     <script src="/js/countdown.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/product.js"></script> }}
+    <!-- Thêm các bundle JS vào trang HTML -->
+    {{!-- <script src="/js/app.bundle.js"></script>
+    <script src="/js/another.bundle.js"></script>
+    <script src="/js/third.bundle.js"></script>
+    <script src="/js/fourth.bundle.js"></script> --}}
+    <script src="/js/bundle.js"></script>
+
   </body>
 </html>

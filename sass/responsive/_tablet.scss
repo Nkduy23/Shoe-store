@@ -32,7 +32,7 @@
       z-index: 10;
       width: 85%;
       height: 100%;
-      background-color: $colorFFF;
+      background-color: #fff;
       transition: transform 0.3s ease-in-out;
       box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
       -webkit-box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.67);
@@ -63,13 +63,13 @@
       }
       .checkbox-nav-mobile:checked + label .menu__icon::before {
         content: "\f107";
-        color: $color000;
+        color: #000;
         transform: translateY(-10px);
       }
       .menu__item {
         position: relative;
         display: block;
-        background-color: $colorFFF;
+        background-color: #fff;
         line-height: 2.5rem;
       }
       .menu__link {

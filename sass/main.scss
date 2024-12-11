@@ -1,34 +1,34 @@
 // base
-@import "./base/reset";
-@import "./base/typography";
+@use "./base/reset";
+@use "./base/typography";
 // abstracts
-@import "./abstracts/mixins";
-@import "./abstracts/variables";
-@import "./abstracts/flexbox";
-@import "./utilities/utils";
+@use "./abstracts/mixins";
+@use "./abstracts/variables";
+@use "./abstracts/flexbox";
+@use "./utilities/utils";
 
 // container
-@import "./container/header-container";
-// @import "./container/main";
-// @import "./container/footer";
+@use "./container/header-container";
+// @use "./container/main";
+// @use "./container/footer";
 
 // layout
-@import "./layout/header";
-@import "./layout/slider";
-@import "./layout/countdown";
-@import "./layout/product";
-// @import "./layout/main";
-// @import "./layout/footer";
+@use "./layout/header";
+@use "./layout/slider";
+@use "./layout/countdown";
+@use "./layout/product";
+// @use "./layout/main";
+// @use "./layout/footer";
 
 // components
-// @import "./components/button";
-// @import "./components/card";
-// @import "./components/form";
-// @import "./components/modal";
+// @use "./components/button";
+// @use "./components/card";
+// @use "./components/form";
+// @use "./components/modal";
 
 // responsive
-@import "./responsive/desktop";
-@import "./responsive/tablet";
-@import "./responsive/mobile";
+@use "./responsive/desktop";
+@use "./responsive/tablet";
+@use "./responsive/mobile";
 
 

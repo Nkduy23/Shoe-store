@@ -7,8 +7,8 @@
     "start": "node server.js",
     "server": "node server.js",
     "build": "webpack --mode development",
-    "watch": "webpack --watch",
-    "dev": "concurrently \"npm run server\" \"npm run build --watch\"\"nodemon server.js\""
+    "watch": "webpack serve --mode development", 
+    "dev": "concurrently \"npm run server\" \"npm run watch\" \"nodemon server.js --watch views --watch src\""
   },
   "dependencies": {
     "express": "^4.17.1",

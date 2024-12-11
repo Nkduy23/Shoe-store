@@ -26,7 +26,7 @@ eval("// Giả sử đây là thời gian kết thúc\nvar saleEndTime = new Dat
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _countdown_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countdown.js */ \"./src/js/countdown.js\");\n/* harmony import */ var _countdown_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_countdown_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.js */ \"./src/js/main.js\");\n/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_main_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _nav_mobile_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav-mobile.js */ \"./src/js/nav-mobile.js\");\n/* harmony import */ var _nav_mobile_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nav_mobile_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.js */ \"./src/js/slider.js\");\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_slider_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../sass/main.scss */ \"./sass/main.scss\");\n// Import các file JS\n\n\n\n\n\n// Import SCSS\n\n\n// (Tùy chọn) Thêm các đoạn mã khởi tạo nếu cần\nconsole.log('All scripts loaded successfully!');\n\n//# sourceURL=webpack://product-list-app/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _countdown_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countdown.js */ \"./src/js/countdown.js\");\n/* harmony import */ var _countdown_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_countdown_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.js */ \"./src/js/main.js\");\n/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_main_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _nav_mobile_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nav-mobile.js */ \"./src/js/nav-mobile.js\");\n/* harmony import */ var _nav_mobile_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_nav_mobile_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.js */ \"./src/js/slider.js\");\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_slider_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../sass/main.scss */ \"./src/sass/main.scss\");\n// Import các file JS\n\n\n\n\n\n// Import SCSS\n\n\n// (Tùy chọn) Thêm các đoạn mã khởi tạo nếu cần\nconsole.log('All scripts loaded successfully!');\n\n//# sourceURL=webpack://product-list-app/./src/js/index.js?");
 
 /***/ }),
 
@@ -60,14 +60,14 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  initImage
 
 /***/ }),
 
-/***/ "./sass/main.scss":
-/*!************************!*\
-  !*** ./sass/main.scss ***!
-  \************************/
+/***/ "./src/sass/main.scss":
+/*!****************************!*\
+  !*** ./src/sass/main.scss ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://product-list-app/./sass/main.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://product-list-app/./src/sass/main.scss?");
 
 /***/ })
 

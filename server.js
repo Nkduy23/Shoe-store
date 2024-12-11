@@ -8,7 +8,7 @@ app.engine("hbs", exphbs.engine({ extname: "hbs" }));
 app.set("view engine", "hbs");
 
 // Cấu hình thư mục chứa tệp JSON
-const products = require("./json/products.json");
+const products = require("./data/products.json");
 
 // API để trả về dữ liệu sản phẩm
 app.get("/api/products", (req, res) => {

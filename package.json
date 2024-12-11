@@ -5,10 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "build": "webpack --mode development",
-    "watch": "webpack serve --mode development", 
-    "dev": "concurrently \"npm run server\" \"npm run watch\" \"nodemon server.js --watch views --watch src\""
+    "watch": "webpack serve --mode development --port 8080",
+    "dev": "concurrently \"npm run server\" \"npm run watch\""
   },
   "dependencies": {
     "express": "^4.17.1",
